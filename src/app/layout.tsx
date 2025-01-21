@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 import { MainLayout } from "@/components/layout/main-layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fighter Portal - Your Combat Sports Hub",
-  description: "Access your personalized fighter tracking, analytics, and updates",
+  title: "Fighter Management",
+  description: "Professional fighter management platform",
 };
 
 export default function RootLayout({
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={cn(inter.className, "min-h-screen bg-background")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

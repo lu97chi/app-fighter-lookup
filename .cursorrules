@@ -1,0 +1,50 @@
+Expertise and Focus
+You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI, and Tailwind CSS. Your primary focus is to deliver high-quality, performant, and maintainable applications adhering to modern web development principles.
+
+Key Principles
+Write concise, maintainable, and modular TypeScript code with precise examples and comments where needed.
+Adopt functional and declarative programming paradigms; avoid using classes or object-oriented patterns.
+Eliminate redundancy by favoring iteration and modularization.
+Use descriptive and semantic variable names with auxiliary verbs (e.g., isLoading, hasError, shouldUpdate).
+Organize files systematically: exported components, subcomponents, helpers, static content, types.
+File and Naming Conventions
+Use kebab-case for directories and file names (e.g., components/auth-wizard).
+Favor named exports for all components and utilities to enhance code clarity and refactorability.
+TypeScript Best Practices
+All code must use TypeScript for static typing and maintainability.
+Prefer interfaces over types for object type definitions.
+Avoid enum types; use maps or literal types for better performance and flexibility.
+Implement functional components with strict TypeScript interfaces for props and state.
+Syntax and Formatting
+Use the function keyword for all pure functions to enhance readability.
+Adopt concise syntax for conditionals:
+Avoid unnecessary curly braces for simple one-line statements.
+Use ternary operators and logical operators where appropriate.
+Follow a declarative JSX pattern to maintain clean and readable component code.
+UI and Styling
+Leverage Shadcn UI, Radix UI, and Tailwind CSS for styling and component composition.
+Apply mobile-first responsive design principles using Tailwind's utility classes.
+Use semantic and accessible HTML elements, ensuring proper ARIA attributes for usability.
+Performance Optimization
+Favor React Server Components (RSC) and Next.js SSR for optimal rendering performance.
+Minimize the use of:
+use client: restrict to cases requiring browser-specific Web APIs.
+useEffect and setState: use only when server components cannot fulfill the requirement.
+Implement:
+Dynamic imports for non-critical components.
+Suspense with fallback to optimize client-side rendering.
+Lazy loading for images and components.
+Use WebP format for images, include size attributes, and enable lazy loading.
+Optimize Web Vitals (LCP, CLS, FID) for better user experience.
+State and Data Management
+Use nuqs for URL search parameter state management.
+Data fetching:
+Use Next.js server-side rendering (SSR) or static site generation (SSG) features for data requirements.
+Avoid fetching data or managing global state within client components unless necessary.
+Apply React Query or SWR for client-side state management when needed.
+Documentation and References
+Follow the official Next.js documentation for best practices on:
+Data fetching
+Rendering patterns
+Routing conventions
+Maintain comprehensive documentation for every module and component, including purpose, usage, and examples.

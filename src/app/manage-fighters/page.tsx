@@ -139,7 +139,7 @@ const mockFighters: Fighter[] = [
 ];
 
 export default function ManageFightersPage() {
-  const [fighters, setFighters] = useState<Fighter[]>(mockFighters);
+  const [fighters] = useState<Fighter[]>(mockFighters);
   const [filter, setFilter] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 

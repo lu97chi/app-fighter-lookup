@@ -1,11 +1,9 @@
 "use client";
 
-import * as React from "react";
-import { useState } from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Select,
   SelectContent,
@@ -22,33 +20,23 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-} from "@/components/ui/dialog";
-import {
   Tabs,
-  TabsContent,
   TabsList,
-  TabsTrigger,
+  TabsTrigger
 } from "@/components/ui/tabs";
+import { format } from "date-fns";
 import {
+  ArrowUpRight,
   DollarSign,
-  TrendingUp,
-  TrendingDown,
+  Download,
+  Filter,
   Plus,
   Search,
-  Filter,
-  Download,
-  Calendar,
-  ArrowUpRight,
-  ArrowDownRight,
-  X,
+  TrendingDown,
+  TrendingUp,
+  X
 } from "lucide-react";
-import { format } from "date-fns";
+import { useState } from "react";
 
 // Mock data
 interface Transaction {

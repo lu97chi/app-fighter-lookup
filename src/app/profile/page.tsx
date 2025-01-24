@@ -5,6 +5,7 @@ import { EditProfileForm } from "@/components/profile/edit-profile-form";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Trophy, Medal, Instagram, Twitter, Facebook, Youtube, Globe, MapPin, Dumbbell, Calendar } from "lucide-react";
+import Image from "next/image";
 
 // Mock data - replace with real data from your backend
 const initialProfileData = {
@@ -51,7 +52,7 @@ export default function ProfilePage() {
             {/* Profile Image */}
             <div className="relative">
               <div className="w-32 h-32 md:w-48 md:h-48 rounded-lg overflow-hidden border border-border bg-card">
-                <img
+                <Image
                   src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${profileData.name}`}
                   alt="Profile"
                   className="w-full h-full object-cover"

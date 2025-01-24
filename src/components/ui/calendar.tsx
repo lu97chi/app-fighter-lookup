@@ -15,18 +15,18 @@ function Calendar({
   showOutsideDays = true,
   ...props
 }: CalendarProps) {
-  const IconLeft = React.forwardRef<HTMLButtonElement>((props, ref) => (
-    <button ref={ref} {...props}>
+  const IconLeft = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+    <button {...props}>
       <ChevronLeft className="h-4 w-4" />
     </button>
-  ));
+  );
   IconLeft.displayName = "IconLeft";
 
-  const IconRight = React.forwardRef<HTMLButtonElement>((props, ref) => (
-    <button ref={ref} {...props}>
+  const IconRight = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+    <button {...props}>
       <ChevronRight className="h-4 w-4" />
     </button>
-  ));
+  );
   IconRight.displayName = "IconRight";
 
   return (
@@ -65,8 +65,8 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft,
-        IconRight,
+        PreviousMonthButton: IconLeft,
+        NextMonthButton: IconRight,
       }}
       {...props}
     />

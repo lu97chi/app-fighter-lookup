@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogContent,
@@ -12,7 +10,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Pencil, Save, User, Mail, Phone, MapPin, Flag, Calendar, X } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Pencil, Save, X } from "lucide-react";
+import { useState } from "react";
 
 interface ProfileData {
   name: string;
@@ -49,7 +49,6 @@ export function EditProfileForm({ section, data, onSave }: EditProfileFormProps)
             </label>
             <Input
               id="name"
-              icon={<User className="h-4 w-4" />}
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="bg-background"
@@ -61,7 +60,6 @@ export function EditProfileForm({ section, data, onSave }: EditProfileFormProps)
             </label>
             <Input
               id="email"
-              icon={<Mail className="h-4 w-4" />}
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -75,7 +73,6 @@ export function EditProfileForm({ section, data, onSave }: EditProfileFormProps)
           </label>
           <Input
             id="phone"
-            icon={<Phone className="h-4 w-4" />}
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className="bg-background"
@@ -87,7 +84,6 @@ export function EditProfileForm({ section, data, onSave }: EditProfileFormProps)
           </label>
           <Input
             id="location"
-            icon={<MapPin className="h-4 w-4" />}
             value={formData.location}
             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
             className="bg-background"
@@ -99,7 +95,6 @@ export function EditProfileForm({ section, data, onSave }: EditProfileFormProps)
           </label>
           <Input
             id="nationality"
-            icon={<Flag className="h-4 w-4" />}
             value={formData.nationality}
             onChange={(e) => setFormData({ ...formData, nationality: e.target.value })}
             className="bg-background"
@@ -111,7 +106,6 @@ export function EditProfileForm({ section, data, onSave }: EditProfileFormProps)
           </label>
           <Input
             id="dateOfBirth"
-            icon={<Calendar className="h-4 w-4" />}
             type="date"
             value={formData.dateOfBirth}
             onChange={(e) => setFormData({ ...formData, dateOfBirth: e.target.value })}
